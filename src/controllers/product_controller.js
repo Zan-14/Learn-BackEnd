@@ -9,7 +9,7 @@ const GetAllData = (req, res) => {
 };
 
 const GetDataById = (req, res) => {
-  const id = req.params.idloe;
+  const id = req.params.id;
 
   const result = productData[id];
 
