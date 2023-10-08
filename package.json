@@ -2,9 +2,11 @@
   "name": "learn-backend",
   "version": "1.0.0",
   "description": "learning backend",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "api",
@@ -21,7 +23,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "dev": "nodemon src/index.js",
-  "start": "node src/index.js"
+  }
 }

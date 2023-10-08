@@ -1,48 +1,20 @@
-// Part - 1
-// const http = require("http");
-// // after installing package superviilains
-// const supervillains = require("supervillains");
-// // after installing package superheroes
-// const superheroes = require("superheroes");
-// const hostname = "127.0.0.1";
-
-// // don't use existing port,
-// const port = 3003;
-
-// const server = http.createServer((req, res) => {
-//   const generateRandSuperVillain = supervillains.random();
-//   const generateRandSuperHero = superheroes.random();
-
-//   res.statusCode = 200;
-//   res.setHeader("Content-Type", "application/json");
-//   res.end(
-//     `My supervillain is ${generateRandSuperVillain} vs my superhero is ${generateRandSuperHero}`
-//   );
-//   //   res.end("hello guys");
-// });
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
-
-// =================================================================
-
-// Part 2
 require("dotenv").config();
 const express = require("express");
-const PORT = process.env.SERVER_PORT || 3003;
-const productRouter = require("./routes/product.route");
+const PORT = process.env.SERVER_PORT || "4646";
+
+const ProductRoute = require("./routes/product_route");
 
 const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello Guys!");
+  res.send("Hello Mother Father");
 });
 
-app.listen(process.env.SERVER_PORT, () => {
-  console.log("Server Running");
-});
+app.use("/api/product", ProductRoute);
 
-app.use("/api/products", productRouter);
+app.listen(PORT, () => {
+  console.log("The server is running on " + PORT);
+});
