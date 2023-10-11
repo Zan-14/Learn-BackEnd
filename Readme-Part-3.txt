@@ -44,6 +44,8 @@ https://github.com/ffuad13/hms-saturday
 
 
 2. KnexJS
+    - Query builder
+    - KnexJS != ORM (Object-relational Mapping)
     *Installation:
         a. global
             npm i -g knex
