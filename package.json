@@ -1,34 +1,26 @@
 {
-  "name": "learn-backend",
+  "name": "project-practice-node",
   "version": "1.0.0",
-  "description": "learning backend",
+  "description": "create api using express app",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "migrateknex": "knex migrate:latest --knexfile src/knexmodel/knexfile.js"
+    "start": "nodemon src/index.js",
+    "build": "node src/index.js"
   },
-  "keywords": [
-    "api",
-    "harisenin",
-    "backend"
-  ],
-  "author": "Zan-JM",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "knex": "^3.0.1",
-    "mysql2": "^3.6.1",
-    "sequelize": "^6.6.5",
-    "superheroes": "^3.0.0",
-    "supervillains": "^3.1.0",
-    "validator": "^13.11.0"
-  },
+  "author": "Zann",
+  "license": "MIT",
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-prettier": "latest",
+    "prettier": "latest"
+  },
+  "dependencies": {
+    "express": "latest",
+    "cors": "latest",
+    "dotenv": "latest"
   }
 }
